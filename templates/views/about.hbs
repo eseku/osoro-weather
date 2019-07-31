@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/css/custom.css">
+      <link rel="icon" href="/img/download.png">
+      <link rel="stylesheet" href="css/materializecss/materialize.css">
+      <link rel="stylesheet" href="/css/fontawesome-pro-5.8.2-web/css/all.css">
+    <meta charset="utf-8">
+    <title>About</title>
+  </head>
+  <body>
+    <div class="main">
+      {{>header}}
+
+      <div class="container">
+          <div class="row">
+              <div class="col s12 center-align">
+                  <h1 class="center-align">About Osoro</h1>
+                  <div class="divider">
+
+                  </div>
+              </div>
+              <div class="col s12 m6">
+                <p>Osoro is the second application i created while learning Node. Osoro is a weather application which has two features.
+                The first feature of Osoro is to fetch weather results for a user based on the user's location.
+                The user has to allow Osoro and grant Osoro permission to get the GPS coordinates of Osoro and then in return
+                show the user his current weather forecast. The second feature is the searh feature and this feature allows the user
+                to search for towns, cities, states in the world and get back both their current weather forecast and the yourForecast
+                from the present day to the same day in the next week! </p>
+              </div>
+              <div class="col s12 m6">
+                  <p>Osoro is still in a production state and as time goes on new features and more advanced functionality would be added
+                  to Osoro. Enjoy!</p>
+              </div>
+          </div>
+      </div>
+
+    </div>
+
+
+
+    {{>footer}}
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script src="js/materializejs/materialize.js"></script>
+    <script type="text/javascript">
+        $(()=>{
+          $('.sidenav').sidenav();
+        });
+    </script>
+  </body>
+</html>

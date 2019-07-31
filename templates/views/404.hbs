@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/materializecss/materialize.css">
+      <link rel="stylesheet" href="/css/fontawesome-pro-5.8.2-web/css/all.css">
+      <link rel="icon" href="/img/download.png">
+    <meta charset="utf-8">
+    <title>Help</title>
+  </head>
+  <body>
+<div class="main">
+  {{>header}}
+  <div class="columns">
+    <div class="column">
+      <div class="notification" style="height: 410px; margin:auto auto; text-align:center">
+          <h1 class="title">Error 404</h1>
+            <h4 class="subtitle">{{title}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{>footer}}
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script src="js/materializejs/materialize.js"></script>
+<script type="text/javascript">
+    $(()=>{
+      $('.sidenav').sidenav();
+    });
+</script>
+  </body>
+</html>
