@@ -5,18 +5,18 @@ const geoCode = require( './utils/geoCode' );
 const forecast = require( './utils/forecast' );
 
 
-//service  worker check
-
-if ( 'serviceWorker' in navigator ) {
-	navigator.serviceWorker.register( '/sw.js' ).then( function ( registration ) {
-		// Registration was successful
-		console.log( 'ServiceWorker registration successful with scope: ', registration.scope );
-	}, function ( err ) {
-		// registration failed :(
-		console.log( 'ServiceWorker registration failed: ', err );
-	} );
-
-}
+// //service  worker check
+//
+// if ( 'serviceWorker' in navigator ) {
+// 	navigator.serviceWorker.register( '/sw.js' ).then( function ( registration ) {
+// 		// Registration was successful
+// 		console.log( 'ServiceWorker registration successful with scope: ', registration.scope );
+// 	}, function ( err ) {
+// 		// registration failed :(
+// 		console.log( 'ServiceWorker registration failed: ', err );
+// 	} );
+//
+// }
 
 const app = express();
 const port = process.env.PORT || 3000;
