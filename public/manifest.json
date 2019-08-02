@@ -5,9 +5,8 @@
   "background_color": "#2196f3",
   "display": "fullscreen",
   "Scope": "/",
-  "start_url": "https://osoro.herokuapp.com",
-  "icons": [
-    {
+  "start_url": ".",
+  "icons": [{
       "src": "img/images/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"

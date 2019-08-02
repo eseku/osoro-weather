@@ -12,22 +12,27 @@ let date = new Date();
 
 
 $( () => {
- getLocation();
+	getLocation();
 	$( field ).on( "keydown", ( event ) => {
 		// alert( event.type + ": " + event.which );
 		if ( event.which == 13 ) {
 			$( button ).click();
 		}
 	} );
+
 	$( button ).click( () => {
 		loadData();
 	} )
+
 	$( locationButton ).click( () => {
 		yourForecast( longitude, latitude );
 	} )
+
+	registerSW();
+
 } );
 
-const loadData = ()=> {
+const loadData = () => {
 	let searchTerm = $.trim( $( field ).val() );
 	let url = path + encodeURIComponent( searchTerm );
 	console.log( url );
@@ -46,7 +51,6 @@ const loadData = ()=> {
 				$( button ).prop( 'disabled', false );
 				return $( '#table1 tbody' ).prepend( '<tr><td colspan=\"7\">' + json1.error + '</td></tr>' )
 			}
-
 
 
 			console.log( json1 );
@@ -127,7 +131,7 @@ const yourForecast = ( longitude, latitude ) => {
 		try {
 			let parsedData = JSON.parse( request.responseText );
 			console.log( parsedData );
-			if (parsedData.error) {
+			if ( parsedData.error ) {
 				$( '#progress1' ).toggle();
 				$( '#locationButton' ).prop( 'disabled', false );
 				return $( yourtable ).prepend( '<tr><td class=\"center-align\" colspan=\"6\">' + parsedData.error + '</td></tr>' )
@@ -137,7 +141,7 @@ const yourForecast = ( longitude, latitude ) => {
 			if ( parsedData.forecast[ 0 ].Summary == 'Overcast' ) {
 				$( ".p-image" ).attr( "src", "../img/overcast.jpg" );
 				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
-        $( '.title1' ).addClass( "white-text" );
+				$( '.title1' ).addClass( "white-text" );
 			} else if ( parsedData.forecast[ 0 ].Summary == 'Humid and Mostly Cloudy' || parsedData.forecast[ 0 ].Summary == 'Mostly Cloudy' ) {
 				$( ".p-image" ).attr( "src", "../img/cloudy.jpg" );
 				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
@@ -150,10 +154,10 @@ const yourForecast = ( longitude, latitude ) => {
 			} else if ( parsedData.forecast[ 0 ].Summary == 'Humid and Overcast' ) {
 				$( ".p-image" ).attr( "src", "../img/humidandovercast.jpg" );
 				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
-			}else if (parsedData.forecast[ 0 ].Summary == 'Clear') {
-        $( ".p-image" ).attr( "src", "../img/clear.jpg" );
+			} else if ( parsedData.forecast[ 0 ].Summary == 'Clear' ) {
+				$( ".p-image" ).attr( "src", "../img/clear.jpg" );
 				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
-      }
+			}
 
 			$( '#locationButton' ).prop( 'disabled', false );
 			$( '#progress1' ).toggle();
@@ -164,4 +168,15 @@ const yourForecast = ( longitude, latitude ) => {
 	}
 	request.send();
 
+}
+
+
+async function registerSW() {
+	if ( 'serviceWorker' in navigator ) {
+		try {
+			await navigator.serviceWorker.register( './serviceWorker.js' );
+		} catch ( e ) {
+			console.log( 'SW registration failed' );
+		}
+	}
 }
