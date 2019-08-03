@@ -61,7 +61,7 @@ const loadData = () => {
 			var today = date.getDay();
 			json1.forecast[ 0 ].DailyForecast.forEach( item => {
 				$( '#dailyparagraph' ).append( '<div style=\"width:100%; border-radius:1%; margin-bottom:5px;\" class=\"center-align col 12 grey darken-3 white-text \"><p>(' + getDayString( today ) + "): " + item.Summary + '</p></div>' )
-				today++;
+				today + 1;
 			} )
 		} catch ( e ) {
 			console.warn( 'Load failed ' + e );
@@ -82,11 +82,11 @@ const getDayString = ( number ) => {
 		return 'Tuesday';
 	} else if ( number == 3 || number == 10 ) {
 		return 'Wednesday';
-	} else if ( number == 4 ) {
+	} else if ( number == 4 || number == 11 ) {
 		return 'Thursday';
-	} else if ( number == 5 ) {
+	} else if ( number == 5 || number == 12) {
 		return 'Friday';
-	} else if ( number == 6 ) {
+	} else if ( number == 6 || number ==13 ) {
 		return 'Saturday';
 	}
 }
