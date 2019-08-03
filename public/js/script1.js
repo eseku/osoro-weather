@@ -61,7 +61,7 @@ const loadData = () => {
 			var today = date.getDay();
 			json1.forecast[ 0 ].DailyForecast.forEach( item => {
 				$( '#dailyparagraph' ).append( '<div style=\"width:100%; border-radius:1%; margin-bottom:5px;\" class=\"center-align col 12 grey darken-3 white-text \"><p>(' + getDayString( today ) + "): " + item.Summary + '</p></div>' )
-				today + 1;
+				today++;
 			} )
 		} catch ( e ) {
 			console.warn( 'Load failed ' + e );
