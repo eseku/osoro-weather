@@ -2,7 +2,7 @@
   "name": "Osoro",
   "short_name": "Osoro",
   "theme_color": "#607d8b",
-  "background_color": "#2196f3",
+  "background_color": "#ffffff",
   "display": "fullscreen",
   "Scope": "/",
   "start_url": ".",
