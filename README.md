@@ -1,19 +1,19 @@
-##Osoro
+# Osoro
 Nodejs Weather Application
 
-##About
+## About
 Osoro is a weather application whose services are written in Nodejs and front-end written with basic HTML, css and javascript
 Osoro makes HTTP requests with [Request](https://www.npmjs.com/package/request) and Ajax, and serves up weather information to the client.
 This project also makes use of the HTML5 Geolocation API to fetch location of the client and provide corresponding weather information.
 
-##Prerequisites
+## Prerequisites
 * [Nodejs](https://nodejs.org) or you can install using [Chocolatey](https://chocolatey.org) by running 
 
-```
-choco install nodejs
-```
+  ```
+  choco install nodejs
+  ```
 
-##Built with
+## Built with
 * [Hbs](https://www.npmjs.com/package/hbs) - The templating engine used
 * [DarkSky API](https://www.darksky.net) - The weather API used
 * [Mapbox API](https://docs.mapbox.com/api/) - The Geocoding API used
@@ -23,15 +23,15 @@ choco install nodejs
 * Ajax
 
 
-##Deployment
+## Deployment
 
-###To clone this repository 
+### To clone this repository 
 Type this into your command line,
-```
-git clone https://github.com/eustacequartey/osoroweather.git
-```
+  ```
+  git clone https://github.com/eustacequartey/osoroweather.git
+  ```
 
-###To Deploy
+### To Deploy
 * In the Directory of the cloned project type 
   ```
   npm install && npm run start
@@ -40,5 +40,5 @@ git clone https://github.com/eustacequartey/osoroweather.git
   after the program is started
   
   
-  ##Author
+  ## Author
   Joojo Quartey
