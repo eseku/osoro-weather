@@ -7,11 +7,13 @@ Osoro makes HTTP requests with [Request](https://www.npmjs.com/package/request) 
 This project also makes use of the HTML5 Geolocation API to fetch location of the client and provide corresponding weather information.
 
 ## Prerequisites
-* [Nodejs](https://nodejs.org) or you can install using [Chocolatey](https://chocolatey.org) by running 
+* Install [Nodejs](https://nodejs.org) from this hyperlink
+or you can install using [Chocolatey](https://chocolatey.org) by running 
 
   ```
   choco install nodejs
   ```
+  in your terminal
 
 ## Built with
 * [Hbs](https://www.npmjs.com/package/hbs) - The templating engine used
@@ -21,6 +23,7 @@ This project also makes use of the HTML5 Geolocation API to fetch location of th
 * [Express](https://www.npmjs.com/express) - The HTTP Server used
 * Jquery
 * Ajax
+* [Nodejs](https://nodejs.org) - The runtime environment used 
 
 
 ## Deployment
