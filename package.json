@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "bulma": "^0.7.5",
     "express": "^4.17.1",
     "hbs": "^4.0.4",
+    "nodemon": "^1.19.2",
     "request": "^2.88.0"
   }
 }

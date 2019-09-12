@@ -145,6 +145,7 @@ const yourForecast = ( longitude, latitude ) => {
 			} else if ( parsedData.forecast[ 0 ].Summary == 'Humid and Mostly Cloudy' || parsedData.forecast[ 0 ].Summary == 'Mostly Cloudy' ) {
 				$( ".p-image" ).attr( "src", "../img/cloudy.jpg" );
 				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
+				$( '.title1' ).addClass( "white-text" );
 			} else if ( parsedData.forecast[ 0 ].Summary == 'Partly Cloudy' ) {
 				$( ".p-image" ).attr( "src", "../img/partlycloudy.jpg" );
 				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
@@ -157,6 +158,10 @@ const yourForecast = ( longitude, latitude ) => {
 			} else if ( parsedData.forecast[ 0 ].Summary == 'Clear' ) {
 				$( ".p-image" ).attr( "src", "../img/clear.jpg" );
 				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
+			}else if (parsedData.forecast[0].Summary.toLowerCase().includes('rain')){
+				$( ".p-image" ).attr( "src", "../img/roof.jpg" );
+				$( '.title1' ).html( parsedData.forecast[ 0 ].Summary );
+				$( '.title1' ).addClass( "white-text" );
 			}
 
 			$( '#locationButton' ).prop( 'disabled', false );
