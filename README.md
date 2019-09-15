@@ -31,7 +31,7 @@ or you can install using [Chocolatey](https://chocolatey.org) by running
 ### To clone this repository 
 Type this into your command line,
   ```
-  git clone https://github.com/eustacequartey/osoroweather.git
+  git clone https://github.com/eustacequartey/osoro-weather.git
   ```
 
 ### To Deploy
