@@ -4,7 +4,7 @@ Nodejs Weather Application
 ## About
 Osoro is a weather application whose services are written in Nodejs and front-end written with basic HTML, css and javascript
 Osoro makes HTTP requests with [Request](https://www.npmjs.com/package/request) and Ajax, and serves up weather information to the client.
-This project also makes use of the HTML5 Geolocation API to fetch location of the client and provide corresponding weather information.
+This project also makes use of the HTML5 Geolocation API to fetch location of the client and provide corresponding weather information
 
 ## Prerequisites
 * Install [Nodejs](https://nodejs.org) from this hyperlink
